@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Deklarasi penggunaan karakter encoding dan penyesuaian viewport untuk tampilan responsive -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+        /* Mengatur font utama dan properti table */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Style untuk tabel: lebar, margin, dan efek bayangan */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mengatur style untuk elemen heading tabel */
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* Style untuk elemen th dan td tabel, pengaturan padding dan border */
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        /* Menambah background alternatif pada baris genap */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Menambah efek hover pada baris tabel */
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Ukuran teks dalam tabel */
+        td {
+            font-size: 18px;
+        }
+
+        /* Style untuk gambar profil */
+        #profile-img {
+            width : 150px;
+            border-radius: auto; /* Ini sebenarnya tidak akan mengubah apa pun, gunakan nilai yang tepat */
+        }
+
+        /* Flexbox untuk menyusun foto profil dan video di samping */
+        #video-profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 5px;
+        }
+
+        /* Pengaturan ukuran video */
+        #video-section video {
+            width: 320px;
+            height: 200px;
+        }
+
+        /* Mengatur margin bawah untuk heading dan paragraf */
+        h1, h2, h3, p {
+            margin-bottom: 30px;
+        }
+
+        /* Pengaturan margin atas untuk heading tentang saya */
+        #Tentang-saya {
+            margin-top: 50px;
+        }
+
+        /* Flexbox untuk daftar keterampilan dan tingkatannya */
+        .List {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        /* Style untuk nama keterampilan */
+        .Nama-skill {
+            font-weight: normal;
+        }
+
+        /* Style untuk level keterampilan */
+        .Level-skill {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading utama untuk halaman -->
+    <h1>Profil Pribadi</h1>
+
+    <!-- Container untuk foto profil dan video, diatur dengan Flexbox -->
+    <div id="video-profile">
+        <div>
+            <!-- Heading untuk foto profil -->
+            <h2>Foto Profil</h2>
+            <!-- Tag img digunakan untuk menampilkan gambar foto profil -->
+            <img id="profile-img" src="/Users/arifwinanda/Downloads/Foto Arif.JPG" alt="Foto profil arif">
+        </div>
+
+        <!-- Video perkenalan diri -->
+        <div id="video-section">
+            <h2>Video Perkenalan Diri</h2>
+            <!-- Tag video digunakan untuk menyertakan video perkenalan -->
+            <video controls>
+                <!-- Menyediakan sumber video -->
+                <source src="/Users/arifwinanda/Downloads/IMG_1836.mp4" alt="Video Profil Arif">
+            </video>
+        </div>
+    </div>
+
+    <!-- Tabel untuk menampilkan informasi biodata -->
+    <table>
+        <tr>
+            <!-- Header untuk tabel biodata -->
+            <th>Biodata</th>
+            <th>Informasi</th>
+        </tr>
+
+        <!-- Baris untuk nama -->
+        <tr>
+            <td>Nama</td>
+            <td>Arif Winanda Lubis</td>
+        </tr>
+
+        <!-- Baris untuk umur -->
+        <tr>
+            <td>Umur</td>
+            <td>20 Tahun</td>
+        </tr>
+
+        <!-- Baris untuk asal -->
+        <tr>
+            <td>Asal</td>
+            <td>Bekasi</td>
+        </tr>
+
+        <!-- Baris untuk email -->
+        <tr>
+            <td>Email</td>
+            <td>arifwinanda3340@gmail.com</td>
+        </tr>
+    </table>
+
+    <!-- Heading untuk bagian Tentang Saya -->
+    <h2 id="Tentang-saya">Tentang saya</h2>
+
+    <!-- Paragraf deskripsi tentang diri -->
+    <p>Halo! nama saya Arif Winanda Lubis, mahasiswa S-1 Teknologi Informasi 
+       Telkom University yang sedang menjalankan kuliah di tingkat 3</p>
+    <p>dan sedang mengambil mata kuliah pemrograman web.</p>
+
+    <!-- Heading untuk bagian Keterampilan -->
+    <h2 id="keterampilan">Kemampuan</h2>
+
+    <!-- Daftar keterampilan dan tingkat keterampilan menggunakan Flexbox -->
+    <div class="List">
+        <span class="Nama-skill">Java</span>
+        <span class="Level-skill">Beginner</span>
+    </div>
+
+    <div class="List">
+        <span class="Nama-skill">Python</span>
+        <span class="Level-skill">Intermediate</span>
+    </div>
+
+    <div class="List">
+        <span class="Nama-skill">English</span>
+        <span class="Level-skill">Intermediate</span>
+    </div>
+
+    <!-- Form untuk menghubungi pengguna -->
+    <div>
+        <h2>Hubungi Saya</h2>
+        <form action="#" method="post">
+            <!-- Input untuk nama -->
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <!-- Input untuk email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <!-- Tombol kirim untuk mengirim form -->
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <!-- Bagian untuk link media sosial -->
+    <div>
+        <h2>Link Media Sosial</h2>
+        <!-- Link ke LinkedIn, menggunakan tag <a> -->
+        <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BiwU1NsI1TcKuUxbjxu88bw%3D%3D" target="_blank">LinkedIn</a> |
+        <!-- Link ke Instagram -->
+        <a href="https://instagram.com/ariflubis._" target="_blank">Instagram</a>
+    </div>
+    
+</body>
+</html>
